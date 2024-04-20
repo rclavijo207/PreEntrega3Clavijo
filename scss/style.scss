@@ -1,0 +1,240 @@
+// Imports
+@import "./colors";
+@import "./designs";
+@import "./media-queries";
+//      Importar cada página
+@import "./pages/index.scss";
+
+// Variables
+$font-family: "Yanone Kaffeesatz", sans-serif;
+
+// Elementos
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+body{
+    background-color: $color-eggshell;
+}
+header{
+    background-color: $color-umber;
+    @include desktop{
+        padding: 1rem 1rem 2rem 1rem;
+    }
+    .header-container{
+        display: flex;
+        width: 100%;
+        @extend .full-container;
+        @include mobile{
+            flex-direction: column;
+        }
+        @include tablet{
+            flex-direction: column;
+        }
+        @include desktop{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .header-logo{
+            justify-self: center;
+            align-self: center;
+            padding: 0 .5rem;
+            justify-content: space-between;
+            img{
+                align-self: center;
+            }
+        }
+        .header-links{
+            display: flex;
+            align-self: center;
+            margin-top: 1rem;
+            @include mobile{
+                flex-direction: row;
+                justify-self: center;
+                background-color: $color-umber;
+            }
+            @include tablet{
+                flex-direction: row;
+                justify-self: center;
+                background-color: $color-umber;
+            }
+            @include desktop{
+                flex-direction: row;
+            }
+            .links-list{
+                li{
+                    a:link{
+                        text-decoration: none;
+                        color: $color-dun;
+                    }
+                    a:visited{
+                        text-decoration: dotted;
+                        color: $color-dun;
+                    }
+                    a:hover{
+                        color: $color-resedagreen;
+                    }
+                    list-style-type: none;
+                    @include mobile{
+                        display: inline;
+                        font-size: large;
+                        margin-right: .5rem;
+                        text-align: center;
+                    }
+                    @include tablet{
+                        display: inline;
+                        font-size: large;
+                        margin-right: 1rem;
+                        text-align: center;
+                    }
+                    @include desktop{
+                        display: inline;
+                        font-size: x-large;
+                        margin-right: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+footer{
+    background-color: $color-taupe;
+    padding: 1rem 1rem 0 1rem;
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        @extend .full-container;
+        @include mobile{
+            flex-direction: column;
+            justify-self: center; 
+        }
+        .footer-items{
+            display: flex;
+            @include mobile{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .footer-info{
+                    .info-list{
+                        display: flex;
+                        flex-direction: row;
+                        li{
+                            list-style-type: none;
+                            font-size: small;
+                            margin-top: 1.5rem;
+                            margin-right: 1rem;
+                        }
+                    }
+                }         
+            }
+            @include tablet{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .footer-info{
+                    .info-list{
+                        display: flex;
+                        flex-direction: row;
+                        li{
+                            list-style-type: none;
+                            font-size: medium;
+                            margin-top: 1.5rem;
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+            }
+            @include desktop{
+                flex-direction: row;
+                .footer-logo{
+                    margin: 0 4rem 0 0;
+                }
+                .footer-info{
+                    .info-list{
+                        display: flex;
+                        flex-direction: row;
+                        margin-top: 4rem;
+                        li{
+                            list-style-type: none;
+                            margin-right: 2rem;
+                            font-size: large;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-socials{
+            display: flex;
+            .socials-list{
+                margin-left: auto;
+                align-self: flex-end;
+                li{
+                    list-style-type: none;
+                    display: inline;
+            
+                    @include mobile{
+                        font-size: 1rem;
+                        margin-right: .5rem;
+                        .img-icon{
+                            width: 40px;
+                        }
+                    }
+                    @include tablet{
+                        font-size: 2rem;
+                        margin-right: .5rem;
+                        .img-icon{
+                            width: 50px;
+                        }
+                    }
+                    @include desktop{
+                        font-size: 3rem;
+                        margin-right: 1rem;
+                        .img-icon{
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-copyright{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+// Clases
+//      Imágenes
+.header-logo{
+    @extend .full-container;
+    img{
+        width: 12rem;
+    }
+}
+.footer-logo{
+    @extend .full-container;
+    img{
+        
+        @include mobile{
+            width: 16rem;
+        }
+        @include tablet{
+            width: 16rem;
+        }
+        @include desktop{
+            width: 30rem;
+        }
+    }
+}
+//      Contenedores
+.full-container{
+    color: $color-dun;
+}
+//      Etiquetas varias
+.hr{
+    color: $color-dun;
+    width: 98%;
+}
