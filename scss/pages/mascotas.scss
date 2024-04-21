@@ -1,0 +1,87 @@
+.pet-info{
+    display: flex;
+    
+    background-color: $color-khaki;
+    color: $color-eggshell;
+    @include mobile{
+        flex-direction: column;
+    }
+    @include tablet{
+        flex-direction: column;
+    }
+    @include desktop{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .pet-image{
+        img{
+            @include mobile{
+                width: 100%;
+            }
+            @include tablet{
+                width: 100%;
+            }
+            @include desktop{
+                width: 512px;
+            }
+        }
+    }
+    .info-items{
+        h2{
+            text-align: center;
+        }
+        @include mobile{
+            padding: 1rem;
+        }
+        @include tablet{
+            padding: 1rem;
+        }
+        @include desktop{
+            padding: .5rem 3rem;
+            width: 30%;
+        }
+    }
+}
+.pet-container{
+    background-color: $color-coyote;
+    color: $color-eggshell;
+    display: flex;
+    @include mobile{
+        flex-direction: column;
+        .pet-image{
+            width: 100%;
+        }
+        .pet-card{
+            padding: 1rem;
+        }
+    }
+    @include tablet{
+        padding: 2rem 1rem;
+        flex-direction: column;
+        .pet-image{
+            align-self: center;
+            width: 512px;
+        }
+        .pet-card{
+            align-self: center;
+            padding: 1rem;
+            width: 400px;
+        } 
+    }
+    @include desktop{
+        padding: 2rem 1rem;
+        flex-direction: column;
+        .pet-image{
+            align-self: center;
+            width: 512px;
+        }
+        .pet-card{
+            align-self: center;
+            padding: 1rem;
+            width: 400px;
+        }
+    }
+    h5{
+        text-align: center;
+    }
+}

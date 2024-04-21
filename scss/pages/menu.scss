@@ -1,0 +1,50 @@
+@mixin fd-container{
+    color: $color-eggshell;
+    display: flex;
+    @include mobile{
+        flex-direction: column;
+        .food-image{
+            width: 100%;
+        }
+        .food-card{
+            padding: 1rem;
+        }
+    }
+    @include tablet{
+        padding: 2rem 1rem;
+        flex-direction: column;
+        .food-image{
+            align-self: center;
+            width: 512px;
+        }
+        .food-card{
+            align-self: center;
+            padding: 1rem;
+            width: 400px;
+        } 
+    }
+    @include desktop{
+        padding: 2rem 1rem;
+        flex-direction: column;
+        .food-image{
+            align-self: center;
+            width: 512px;
+        }
+        .food-card{
+            align-self: center;
+            padding: 1rem;
+            width: 400px;
+        }
+    }
+    h5{
+        text-align: center;
+    }
+}
+.drink-container{
+    background-color: $color-khaki;
+    @include fd-container;
+}
+.food-container{
+    background-color: $color-coyote;
+    @include fd-container;
+}

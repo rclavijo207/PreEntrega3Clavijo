@@ -4,6 +4,10 @@
 @import "./media-queries";
 //      Importar cada página
 @import "./pages/index.scss";
+@import "./pages/mascotas.scss";
+@import "./pages/menu.scss";
+@import "./pages/eventos.scss";
+@import "./pages/contacto.scss";
 
 // Variables
 $font-family: "Yanone Kaffeesatz", sans-serif;
@@ -96,6 +100,25 @@ header{
                     }
                 }
             }
+        }
+    }
+}
+section{
+    .page-title{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+        color: $color-taupe;
+        .icon-one{
+            width: 50px;
+        }
+        .icon-two{
+            width: 50px;
+        }
+        h1{
+            padding: 0 1rem;
         }
     }
 }

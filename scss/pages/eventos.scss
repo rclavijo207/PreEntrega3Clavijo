@@ -1,0 +1,60 @@
+.event-card{
+    background-color: $color-khaki;
+    display: flex;
+    @include mobile{
+        flex-direction: column;
+    }
+    @include tablet{
+        flex-direction: row;
+        justify-content: center;
+        padding: 2rem;
+    }
+    @include desktop{
+        flex-direction: row;
+        justify-content: center;
+        padding: 2rem;
+    }
+    .event-image{
+        @include mobile{
+            flex-direction: column;
+            width: 100%;
+        }
+        @include tablet{
+            flex-direction: row;
+            width: 50%;
+        }
+        @include desktop{
+            flex-direction: row;
+            width: 512px;
+        }
+    }
+    .event-text{
+        color: $color-eggshell;
+        display: flex;
+        flex-direction: column;
+        @include mobile{
+            padding: 1rem;
+        }
+        @include tablet{
+            padding: 1rem;
+        }
+        @include desktop{
+            align-self: center;
+            width: 400px;
+            margin-left: 5rem;
+            padding: 0 1rem;
+        }
+        h5{
+            text-align: center;
+        }
+        .event-button{
+            align-self: center;
+            background-color: $color-resedagreen;
+            border: none;
+            border-radius: 3px;
+            color: $color-white;
+            padding: 2px 5px;
+            width: 100px;
+        }
+    }
+}
