@@ -83,16 +83,6 @@
         justify-content: center;
         align-items: center;
     }
-    .subscription-image{
-        @include mobile{
-            display: none;
-        }
-        @include tablet{
-            display: none;
-        }
-        @include desktop{
-        }
-    }
     .subscription-items{
         display: flex;
         flex-direction: column;

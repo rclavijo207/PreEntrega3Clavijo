@@ -113,16 +113,6 @@
     align-items: center;
   }
 }
-@media screen and (max-width: 576px) {
-  .subscription-container .subscription-image {
-    display: none;
-  }
-}
-@media screen and (min-width: 577px) and (max-width: 992px) {
-  .subscription-container .subscription-image {
-    display: none;
-  }
-}
 .subscription-container .subscription-items {
   display: flex;
   flex-direction: column;
