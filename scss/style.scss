@@ -1,13 +1,14 @@
 // Imports
-@import "./colors";
-@import "./designs";
-@import "./media-queries";
+@import "_colors.scss";
+@import "_designs.scss";
+@import "_media-queries.scss";
+@import "_animations.scss";
 //      Importar cada página
-@import "./pages/index.scss";
-@import "./pages/mascotas.scss";
-@import "./pages/menu.scss";
-@import "./pages/eventos.scss";
-@import "./pages/contacto.scss";
+@import "pages/index.scss";
+@import "pages/mascotas.scss";
+@import "pages/menu.scss";
+@import "pages/eventos.scss";
+@import "pages/contacto.scss";
 
 // Variables
 $font-family: "Yanone Kaffeesatz", sans-serif;
@@ -217,6 +218,10 @@ footer{
                         margin-right: 1rem;
                         .img-icon{
                             width: 50px;
+                        }
+                        // Animación para íconos
+                        .img-icon:hover{
+                            @include rotate-center;
                         }
                     }
                 }

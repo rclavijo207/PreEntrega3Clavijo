@@ -1,3 +1,23 @@
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 .location-container {
   background-color: #AD9984;
   color: #EDE6D5;
@@ -834,6 +854,10 @@ footer .footer-container .footer-socials .socials-list li {
   }
   footer .footer-container .footer-socials .socials-list li .img-icon {
     width: 50px;
+  }
+  footer .footer-container .footer-socials .socials-list li .img-icon:hover {
+    -webkit-animation: rotate-center 0.6s ease-in-out both;
+    animation: rotate-center 0.6s ease-in-out both;
   }
 }
 footer .footer-container .footer-copyright {
